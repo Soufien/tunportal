@@ -1,6 +1,6 @@
 angular.module('starter.services', [])
 
-.factory('Chats', function() {
+.factory('lists', function() {
   // Might use a resource here that returns a JSON array
 
   // Some fake testing data
@@ -24,8 +24,18 @@ angular.module('starter.services', [])
     name: 'Entreprise 1',
     denomination: 'Entreprise 1 description.',
     logo: 'https://pbs.twimg.com/profile_images/1266780377/Logo_Soci_t__G_n_rale.jpg'
-  }, {
+  },{
     id: 4,
+    name: 'Entreprise 1',
+    denomination: 'Entreprise 1 description.',
+    logo: 'https://pbs.twimg.com/profile_images/1266780377/Logo_Soci_t__G_n_rale.jpg'
+  }, {
+    id: 5,
+    name: 'Entreprise 1',
+    denomination: 'Entreprise 1 description.',
+    logo: 'https://pbs.twimg.com/profile_images/1266780377/Logo_Soci_t__G_n_rale.jpg'
+  }, {
+    id: 6,
     name: 'Entreprise 1',
     denomination: 'Entreprise 1 description.',
     logo: 'https://pbs.twimg.com/profile_images/1266780377/Logo_Soci_t__G_n_rale.jpg'

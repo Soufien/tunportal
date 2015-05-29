@@ -2,6 +2,7 @@ angular.module('starter.controllers', [])
 
 .controller('MapCtrl',  function($scope, $ionicLoading) {
 
+
 /*        google.maps.event.addDomListener(window, 'load', function() {
             var myLatlng = new google.maps.LatLng(37.3000, -120.4833);
 
@@ -28,19 +29,20 @@ angular.module('starter.controllers', [])
     })
 
 .controller('ListCtrl', function($scope, lists) {
-  $scope.lists = lists.all();
-        console.log($scope.lists.length);
+        $scope.lists = lists.all();
   $scope.remove = function(item) {
-      lists.remove(item);
+      ListEnt.remove(item);
   }
 })
 
-.controller('ChatDetailCtrl', function($scope, $stateParams, lists) {
-  $scope.entreprise = lists.get($stateParams.itemId);
+.controller('EntrepriseDetailCtrl', function($scope, $stateParams, ListEnt) {
+        console.log("ccc")
+        $scope.entreprise = ListEnt.get($stateParams.id);
 })
 
 .controller('AboutCtrl', function($scope) {
-  $scope.settings = {
+
+        $scope.settings = {
     enableFriends: true
   };
 });

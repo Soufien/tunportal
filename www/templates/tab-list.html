@@ -1,10 +1,10 @@
 <ion-view view-title="Liste entreprises">
   <ion-content>
     <ion-list>
-      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="ietm in lists" type="item-text-wrap" href="#/tab/list/{{item.itemid}}">
-        <img ng-src="{{ietm.logo}}">
-        <h2>{{ietm.name}}</h2>
-        <p>{{ietm.denomination}}</p>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="item in lists" type="item-text-wrap" href="#/tab/list/{{item.id}}">
+        <img ng-src="{{item.logo}}">
+        <h2>{{item.name}}</h2>
+        <p>{{item.denomination}}</p>
         <i class="icon ion-chevron-right icon-accessory"></i>
       </ion-item>
     </ion-list>
