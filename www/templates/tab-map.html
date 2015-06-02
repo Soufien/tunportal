@@ -1,7 +1,5 @@
 <ion-view view-title="Map view">
-  <ion-content class="padding">
-
-    <ion-content ng-controller="MapCtrl">
-      <div id="map" data-tap-disabled="true"></div>
-    </ion-content>
+  <ion-content data-tap-disabled="true">
+    <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
+  </ion-content>
 </ion-view>

@@ -1,6 +1,6 @@
 angular.module('starter.services', [])
 
-.factory('lists', function() {
+.factory('ListEnt', function() {
   // Might use a resource here that returns a JSON array
 
   // Some fake testing data
@@ -48,9 +48,9 @@ angular.module('starter.services', [])
     remove: function(item) {
       lists.splice(lists.indexOf(item), 1);
     },
-    get: function(itemId) {
+    get: function(id) {
       for (var i = 0; i < lists.length; i++) {
-        if (lists[i].id === parseInt(itemId)) {
+        if (lists[i].id === parseInt(id)) {
           return lists[i];
         }
       }

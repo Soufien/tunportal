@@ -57,10 +57,10 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         }
       }
     })
-    .state('tab.item-detail', {
+    .state('tab.entreprise-detail', {
       url: '/list/:id',
       views: {
-        'tab-item': {
+        'tab-lists': {
           templateUrl: 'templates/entreprise-detail.html',
           controller: 'EntrepriseDetailCtrl'
         }

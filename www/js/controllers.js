@@ -1,42 +1,18 @@
-angular.module('starter.controllers', [])
+angular.module('starter.controllers', ['uiGmapgoogle-maps'])
 
-.controller('MapCtrl',  function($scope, $ionicLoading) {
-
-
-/*        google.maps.event.addDomListener(window, 'load', function() {
-            var myLatlng = new google.maps.LatLng(37.3000, -120.4833);
-
-            var mapOptions = {
-                center: myLatlng,
-                zoom: 16,
-                mapTypeId: google.maps.MapTypeId.ROADMAP
-            };
-
-            var map = new google.maps.Map(document.getElementById("map"), mapOptions);
-
-            navigator.geolocation.getCurrentPosition(function(pos) {
-                map.setCenter(new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude));
-                var myLocation = new google.maps.Marker({
-                    position: new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude),
-                    map: map,
-                    title: "My Location"
-                });
-            });
-
-            $scope.map = map;
-        });*/
-
+.controller('MapCtrl', function($scope, $ionicLoading, $compile) {
+        $scope.map = { center: { latitude: 45, longitude: -73 }, zoom: 8 };
+        console.log($scope.map);
     })
 
-.controller('ListCtrl', function($scope, lists) {
-        $scope.lists = lists.all();
+.controller('ListCtrl', function($scope, ListEnt) {
+        $scope.lists = ListEnt.all();
   $scope.remove = function(item) {
       ListEnt.remove(item);
   }
 })
 
 .controller('EntrepriseDetailCtrl', function($scope, $stateParams, ListEnt) {
-        console.log("ccc")
         $scope.entreprise = ListEnt.get($stateParams.id);
 })
 
