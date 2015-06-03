@@ -11,31 +11,21 @@ angular.module('starter.services', [])
     logo: 'https://pbs.twimg.com/profile_images/1266780377/Logo_Soci_t__G_n_rale.jpg'
   }, {
     id: 1,
-    name: 'Entreprise 1',
-    denomination: 'Entreprise 1 description.',
+    name: 'Entreprise 2',
+    denomination: 'Entreprise 2 description.',
     logo: 'https://pbs.twimg.com/profile_images/1266780377/Logo_Soci_t__G_n_rale.jpg'
   },{
     id: 2,
-    name: 'Entreprise 1',
-    denomination: 'Entreprise 1 description.',
+    name: 'Entreprise 3',
+    denomination: 'Entreprise 3 description.',
     logo: 'https://pbs.twimg.com/profile_images/1266780377/Logo_Soci_t__G_n_rale.jpg'
   }, {
     id: 3,
-    name: 'Entreprise 1',
-    denomination: 'Entreprise 1 description.',
+    name: 'Entreprise 4',
+    denomination: 'Entreprise 4 description.',
     logo: 'https://pbs.twimg.com/profile_images/1266780377/Logo_Soci_t__G_n_rale.jpg'
   },{
     id: 4,
-    name: 'Entreprise 1',
-    denomination: 'Entreprise 1 description.',
-    logo: 'https://pbs.twimg.com/profile_images/1266780377/Logo_Soci_t__G_n_rale.jpg'
-  }, {
-    id: 5,
-    name: 'Entreprise 1',
-    denomination: 'Entreprise 1 description.',
-    logo: 'https://pbs.twimg.com/profile_images/1266780377/Logo_Soci_t__G_n_rale.jpg'
-  }, {
-    id: 6,
     name: 'Entreprise 1',
     denomination: 'Entreprise 1 description.',
     logo: 'https://pbs.twimg.com/profile_images/1266780377/Logo_Soci_t__G_n_rale.jpg'
