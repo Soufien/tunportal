@@ -9,7 +9,31 @@
   <ion-content class="padding">
     <img ng-src="{{entreprise.logo}}" style="width: 64px; height: 64px">
     <p>
-      {{entreprise.denomination}}
+      Descrition : {{entreprise.denomination}}
     </p>
+    <p>
+      Responsable : Responsable de l'entreprise 1
+    </p>
+
+    <p>
+      Delegation : Delegation de l'entreprise 1
+    </p>
+
+    <p>
+      Site web : www.entreprise1.com
+    </p>
+
+    <p>
+      Mail : contact@entreprise1.com
+    </p>
+
+    <p>
+      Tel : 22 222 222
+    </p>
+
+    <ui-gmap-google-map center='map.center' zoom='map.zoom'>
+      <ui-gmap-marker coords="marker4.coords" options="marker4.options" events="marker4.events" idkey="marker4.id" closeClick="hideMarkerPopup()" onClicked="showMarkerPopup()">
+      </ui-gmap-marker>
+    </ui-gmap-google-map>
   </ion-content>
 </ion-view>
