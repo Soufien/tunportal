@@ -6,7 +6,10 @@ angular.module('starter.controllers', ['uiGmapgoogle-maps'])
     })
 
 .controller('ListCtrl', function($scope, ListEnt) {
-        $scope.lists = ListEnt.all();
+
+         ListEnt.all(function(entreprises){
+             $scope.lists = entreprises;
+        });
   $scope.remove = function(item) {
       ListEnt.remove(item);
   }
