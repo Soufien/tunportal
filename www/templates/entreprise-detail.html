@@ -12,23 +12,23 @@
       Descrition : {{entreprise.denomination}}
     </p>
     <p>
-      Responsable : Responsable de l'entreprise 1
+      Responsable : {{entreprise.responsable}}
     </p>
 
     <p>
-      Delegation : Delegation de l'entreprise 1
+      Delegation : {{entreprise.delegation}}
     </p>
 
     <p>
-      Site web : www.entreprise1.com
+      Site web : <a href="'{{entreprise.url}}'">site</a>
     </p>
 
     <p>
-      Mail : contact@entreprise1.com
+      Mail : {{entreprise.email}}
     </p>
 
     <p>
-      Tel : 22 222 222
+      Tel : {{entreprise.telephone}}
     </p>
 
     <ui-gmap-google-map center='map.center' zoom='map.zoom'>

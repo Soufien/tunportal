@@ -3,8 +3,9 @@
         <ion-list>
             <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="entreprise in lists" type="item-text-wrap" href="#/tab/list/{{entreprise.id}}">
                 <img ng-src="{{entreprise.logo}}">
-                <h2>{{entreprise.name}}</h2>
-                <p>{{entreprise.denomination}}</p>
+                <h2>{{entreprise.denomination}}</h2>
+                <p>Secteur : {{entreprise.secteur}}</p>
+                <p>Responsable : {{entreprise.responsable}}</p>
                 <i class="icon ion-chevron-right icon-accessory"></i>
             </ion-item>
         </ion-list>

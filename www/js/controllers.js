@@ -1,6 +1,28 @@
 angular.module('starter.controllers', [])
 
-.controller('MapCtrl', function($scope, $ionicLoading, $compile) {
+.controller('MapCtrl', function($scope, $ionicLoading, $compile, ListEnt) {
+
+        $scope.markersArray = [];
+        ListEnt.all(function(entreprises){
+            $scope.lists = entreprises;
+
+            for(i = 0 ; i<entreprises.length ; i++){
+                $scope.markersArray[i]= {
+                    id: i,
+                    coords: {
+                        latitude: entreprises[i].latitude,
+                        longitude: entreprises[i].longitude
+                    },
+                    options:{
+                        draggable: true,
+                        labelContent: entreprises[i].denomination+'<br/>'+"Secteur : "+entreprises[i].secteur,
+                        labelAnchor: "80 120",
+                        labelClass: "marker-labels"
+                    }
+                };
+            }
+        });
+
         $scope.map = {
             center: {
                 latitude: 36.805604,
@@ -10,80 +32,6 @@ angular.module('starter.controllers', [])
             pan: 1
         };
 
-        $scope.marker = {
-            id: 0,
-            coords: {
-                latitude: 36.805604,
-                longitude: 10.176237
-            }
-        };
-
-        $scope.marker.options = {
-            draggable: true,
-            labelContent: "Entreprise 1 "+'<br/>'+"Entreprise 1 description",
-            labelAnchor: "80 120",
-            labelClass: "marker-labels"
-        };
-
-        $scope.marker1 = {
-            id: 1,
-            coords: {
-                latitude: 36.805604,
-                longitude: 10.176237
-            }
-        };
-
-        $scope.marker1.options = {
-            draggable: true,
-            labelContent: "Entreprise 2 "+'<br/>'+"Entreprise 2 description",
-            labelAnchor: "80 120",
-            labelClass: "marker-labels"
-        };
-
-        $scope.marker2 = {
-            id: 2,
-            coords: {
-                latitude: 36.805604,
-                longitude: 10.176237
-            }
-        };
-
-        $scope.marker2.options = {
-            draggable: true,
-            labelContent: "Entreprise 3 "+'<br/>'+"Entreprise 3 description",
-            labelAnchor: "80 120",
-            labelClass: "marker-labels"
-        };
-
-        $scope.marker3 = {
-            id: 3,
-            coords: {
-                latitude: 36.805604,
-                longitude: 10.176237
-            }
-        };
-
-        $scope.marker3.options = {
-            draggable: true,
-            labelContent: "Entreprise 4 "+'<br/>'+"Entreprise 4 description",
-            labelAnchor: "80 120",
-            labelClass: "marker-labels"
-        };
-
-        $scope.marker4 = {
-            id: 4,
-            coords: {
-                latitude: 36.805604,
-                longitude: 10.176237
-            }
-        };
-
-        $scope.marker4.options = {
-            draggable: true,
-            labelContent: "Entreprise 5 "+'<br/>'+"Entreprise 5 description",
-            labelAnchor: "80 120",
-            labelClass: "marker-labels"
-        };
     })
 
 .controller('ListCtrl', function($scope, ListEnt) {
@@ -127,6 +75,6 @@ angular.module('starter.controllers', [])
 .controller('AboutCtrl', function($scope) {
 
         $scope.settings = {
-    enableFriends: true
+            enableFriends: true
   };
 });
