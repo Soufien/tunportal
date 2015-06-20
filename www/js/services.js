@@ -8,13 +8,13 @@ angular.module('starter.services', [])
 
   return {
     all: function(callback) {
-      $http.get('http://localhost:2403/entreprise')
+      $http.get('http://192.168.56.1:2403/entreprise')
           .success(function(entreprises) {
             lists = entreprises;
             callback(entreprises);
           })
           .error(function(err) {
-            alert(err);
+            alert("Connexion intenet impossible");
           });
     },
     get: function(id) {
